@@ -18,13 +18,15 @@
 
 // Permet de convertir les pixels en rem
 $root-font-size: 16px;
-@mixin font($size, $line-height: null, $weight: null) {
-    font-size: $size; // IE fix
+@mixin font-size($size, $line-height: null) {
+    font-size: $size;
     font-size: ($size / $root-font-size) * 1rem;
-    @if $weight != null {
-        font-weight: $weight;
-    }
-    @if $weight != null {
+    @if $line-height != null {
         line-height: $line-height;
     }
+}
+
+// Permet de rajouter des polices par défaut
+@mixin font-name($fontname) {
+    font-family: '#{$fontname}', 'Arial', 'Sans Serif';
 }
