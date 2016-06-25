@@ -1,0 +1,9 @@
+html {
+    font-size: 62.5%;
+    color: black;
+    font-family: 'Arial', 'Sans Serif';
+}
+
+body {
+    @include font-size(16);
+}

@@ -1,0 +1,23 @@
+// MIXINS //
+
+// Automatiser le code pour la font
+@mixin font-face($fontname,$filename,$fontstyle: normal,$fontweight: normal) {
+    @font-face {
+        font-family: '#{$fontname}';
+        src: url('../fonts/#{$filename}.eot');
+        src: url('../fonts/#{$filename}.eot?#iefix') format('embedded-opentype'),
+        //url('../fonts/#{$filename}.woff2') format('woff2'),
+        url('../fonts/#{$filename}.woff') format('woff'),
+        url('../fonts/#{$filename}.ttf') format('truetype'),
+        url('../fonts/#{$filename}.svg##{$filename}') format('svg');
+
+        font-style: $fontstyle;
+        font-weight: $fontweight;
+    }
+}
+
+// Permet de convertir les pixels en rem
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
