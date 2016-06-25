@@ -1,6 +1,27 @@
 // GENERAL //
 
-h1 {
-    color: yellow;
-    @include font(16px, 1.5);
+// Définition des titrailles
+h1, .h1-like,
+h2, .h2-like,
+h3, .h3-like,
+h4, .h4-like {
+    @include font-name(Roboto-Bold);
+}
+
+h1, .h1-like {
+    @include font-size(36px);
+}
+
+h2, .h2-like {
+    @include font-size(24px);
+}
+
+h3, .h3-like {
+    @include font-size(20px);
+}
+
+// Définition des paragraphes
+p {
+    @include font-size(18px);
+    @include font-name(Roboto-Light);
 }

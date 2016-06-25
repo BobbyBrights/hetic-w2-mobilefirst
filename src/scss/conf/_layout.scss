@@ -1,14 +1,20 @@
 // LAYOUT //
 
+html, body {
+    height: 100%;
+}
+
 html {
     color: black;
-    font-family: 'Arial', 'Sans Serif';
+    font-family: "Arial", "Sans Serif";
+    background: $white;
 }
 
 body {
-    @include font(50px);
+    @include font-size(18px);
 }
 
-html, body {
-    background: $white;
+.main, .section, .article {
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
