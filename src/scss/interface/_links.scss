@@ -1,1 +1,12 @@
 // LIENS //
+
+// Définition du style des liens
+a {
+    @include font-name(Roboto-Bold);
+    color: $gold_tan;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
