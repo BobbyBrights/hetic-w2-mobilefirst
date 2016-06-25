@@ -1,1 +1,6 @@
 // GENERAL //
+
+h1 {
+    color: yellow;
+    @include font(16px, 1.5);
+}
