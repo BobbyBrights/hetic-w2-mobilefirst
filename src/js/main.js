@@ -14,6 +14,6 @@ jQuery(window).resize(function() {
 });
 
 // DOCUMENT SCROLL //
-jQuery(doc).scroll(function() {
+jQuery(window).scroll(function() {
 
 });
