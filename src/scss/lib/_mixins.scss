@@ -17,7 +17,14 @@
 }
 
 // Permet de convertir les pixels en rem
-@mixin font-size($sizeValue: 1.6) {
-  font-size: ($sizeValue * 10) + px;
-  font-size: $sizeValue + rem;
+$root-font-size: 16px;
+@mixin font($size, $line-height: null, $weight: null) {
+    font-size: $size; // IE fix
+    font-size: ($size / $root-font-size) * 1rem;
+    @if $weight != null {
+        font-weight: $weight;
+    }
+    @if $weight != null {
+        line-height: $line-height;
+    }
 }
