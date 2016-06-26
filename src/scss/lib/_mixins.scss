@@ -4,12 +4,12 @@
 @mixin font-face($fontname,$filename,$fontstyle: normal,$fontweight: normal) {
     @font-face {
         font-family: '#{$fontname}';
-        src: url('../fonts/#{$filename}.eot');
-        src: url('../fonts/#{$filename}.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/#{$filename}.woff2') format('woff2'),
-        url('../fonts/#{$filename}.woff') format('woff'),
-        url('../fonts/#{$filename}.ttf') format('truetype'),
-        url('../fonts/#{$filename}.svg##{$filename}') format('svg');
+        src: url('../../fonts/#{$filename}.eot');
+        src: url('../../fonts/#{$filename}.eot?#iefix') format('embedded-opentype'),
+        // url('../../fonts/#{$filename}.woff2') format('woff2'),
+        url('../../fonts/#{$filename}.woff') format('woff'),
+        url('../../fonts/#{$filename}.ttf') format('truetype'),
+        url('../../fonts/#{$filename}.svg##{$filename}') format('svg');
 
         font-style: $fontstyle;
         font-weight: $fontweight;
@@ -29,4 +29,44 @@ $root-font-size: 16px;
 // Permet de rajouter des polices par défaut
 @mixin font-name($fontname) {
     font-family: '#{$fontname}', 'Arial', 'Sans Serif';
+}
+
+// Mixins propres aux flexbox
+@mixin flexcontainer($display: flex, $flexdirection: false, $flexwrap: false, $justifycontent: false, $alignitems: false, $aligncontent: false) {
+    // $display: flex | inline-flex
+    // $flexdirection: row(default) | row-reverse | column | column-reverse
+    // $flexwrap: nowrap(default) | wrap | wrap-reverse
+    // $justifycontent: flex-start(default) | flex-end | center | space-between | space-around
+    // $alignitems: flex-start | flex-end | center | baseline | stretch (default)
+    // $aligncontent: flex-start | flex-end | center | space-between | space-around | stretch (default)
+    @if $display == flex {
+        display: -ms-flexbox;
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: flex;
+    }
+    @else {
+        display: -ms-inline-flexbox;
+        display: -moz-inline-flex;
+        display: -webkit-inline-flex;
+        display: inline-flex;
+    }
+    @if $flexdirection { @include flexprop(flex-direction, $flexdirection); }
+    @if $flexwrap { @include flexprop(flex-wrap, $flexwrap); }
+    @if $justifycontent { @include flexprop(justify-content, $justifycontent); }
+    @if $alignitems { @include flexprop(align-items, $alignitems); }
+    @if $aligncontent { @include flexprop(align-content, $aligncontent); }
+}
+
+@mixin flexchild($order: false, $flexgrow: 0, $flexshrink: 1, $flexbasis: auto, $alignself: false) {
+    @if $order { @include flexprop(order, $order); }
+    @include flexprop(flex, ($flexgrow $flexshrink $flexbasis));
+    @if $alignself { @include flexprop(align-self, $alignself); }
+}
+
+@mixin flexprop($prop, $value) {
+    -webkit-#{$prop}: $value;
+    -moz-#{$prop}: $value;
+    -ms-#{ieflexvalue($prop)}: ieflexvalue($value);
+    #{$prop}: $value;
 }
