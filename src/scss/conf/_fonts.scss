@@ -1,8 +1,9 @@
 // TYPO //
 
-@include font-face('Roboto-Thin', 'Roboto-Thin');
-@include font-face('Roboto-Light', 'Roboto-Light');
-@include font-face('Roboto-Regular', 'Roboto-Regular');
-@include font-face('Roboto-Medium', 'Roboto-Medium');
-@include font-face('Roboto-Bold', 'Roboto-Bold');
-@include font-face('Roboto-Black', 'Roboto-Black');
+@include font-face('BrandonGrotesque-Light', 'BrandonGrotesque-Light', normal, 300);
+@include font-face('BrandonGrotesque-Regular', 'BrandonGrotesque-Regular', normal, 400);
+@include font-face('BrandonGrotesque-Medium', 'BrandonGrotesque-Medium', normal, 500);
+@include font-face('BrandonGrotesque-Bold', 'BrandonGrotesque-Bold', bold, 700);
+@include font-face('BrandonGrotesque-Black', 'BrandonGrotesque-Black', bold, 900);
+@include font-face('Neutraface2-Light', 'Neutraface2-Light', normal, 300);
+@include font-face('Neutraface2-Demi', 'Neutraface2-Demi', bold, 500);
