@@ -5,13 +5,19 @@ h1, .h1-like,
 h2, .h2-like,
 h3, .h3-like,
 h4, .h4-like {
-    @include font-name(Roboto-Bold);
+    margin: 0;
+    color: $grey_space;
+    @include font-name(Neutraface2-Demi);
+    text-transform: uppercase;
 }
 
 h1, .h1-like {
     @include font-size(22px);
 
     @media #{$tiny} {
+        @include font-size(28px);
+    }
+    @media #{$small} {
         @include font-size(36px);
     }
 }
@@ -32,10 +38,16 @@ h3, .h3-like {
     }
 }
 
+strong {
+    font-weight: 900;
+}
+
 // Définition des paragraphes
 p {
+    margin-bottom: 10px;
+    color: $grey_space;
+    @include font-name(BrandonGrotesque-Light);
     @include font-size(16px);
-    @include font-name(Roboto-Light);
 
     @media #{$tiny} {
         @include font-size(18px);

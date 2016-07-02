@@ -1,0 +1,26 @@
+// HELPERS //
+
+// Wrapper pour contenir l'ensemble du site
+.wrapper {
+    @include flexcontainer($display: flex, $flexwrap: wrap);
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    @media #{$large} {
+        max-width: 1200px;
+    }
+}
+
+// Ajout de gouttières
+.gutters {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
