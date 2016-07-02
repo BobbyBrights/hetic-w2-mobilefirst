@@ -2,10 +2,11 @@
 
 html, body {
     height: 100%;
+    width: 100%;
 }
 
 html {
-    color: black;
+    color: $grey_space;
     font-family: "Arial", "Sans Serif";
     background: $white;
 }
@@ -18,12 +19,18 @@ body {
     }
 }
 
-.main, .section, .article {
+main {
+    counter-reset: numero;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+section, footer {
     padding-top: 30px;
     padding-bottom: 30px;
 
     @media #{$tiny} {
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 }
