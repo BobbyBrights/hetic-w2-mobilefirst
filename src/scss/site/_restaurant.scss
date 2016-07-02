@@ -1,0 +1,56 @@
+// RUBRIQUE RESTAURANT //
+
+.restaurant {
+    @include flexcontainer($display: flex, $flexdirection: row, $flexwrap: wrap);
+}
+
+.restaurant--pagination {
+    margin-bottom: 40px;
+    
+    @media #{$small} {
+        @include flexchild($flexshrink: 1, $flexbasis: 41.667%);
+        padding-left: 8.333%;
+    }
+}
+
+.restaurant--numerotation {
+    display: inline-block;
+}
+
+.restaurant--intro {
+    @include flexcontainer($display: flex, $flexdirection: row, $flexwrap: wrap);
+    @media #{$small} {
+        @include flexchild($flexshrink: 0, $flexbasis: 58.333%);
+        padding-right: 8.333%;
+    }
+}
+
+.restaurant--title {
+    @include flexchild($flexshrink: 0, $flexbasis: 100%);
+    margin-bottom: 20px;
+
+    @media #{$small} {
+        margin-bottom: 40px;
+    }
+}
+
+.restaurant--first,
+.restaurant--second {
+    @media #{$small} {
+        @include flexchild($flexshrink: 0, $flexbasis: 50%);
+    }
+}
+
+.restaurant--first {
+    @media #{$small} {
+        padding-right: 15px;
+    }
+}
+
+.restaurant--second {
+    display: none;
+
+    @media #{$small} {
+        padding-left: 15px;
+    }
+}
