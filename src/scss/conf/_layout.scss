@@ -6,7 +6,7 @@ html, body {
 }
 
 html {
-    color: $grey_space;
+    color: $green_bunker;
     font-family: "Arial", "Sans Serif";
     background: $white;
 }
@@ -23,11 +23,16 @@ main {
     counter-reset: numero;
     padding-top: 30px;
     padding-bottom: 30px;
+
+    @media #{$tiny} {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 }
 
 section, footer {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 
     @media #{$tiny} {
         padding-top: 50px;

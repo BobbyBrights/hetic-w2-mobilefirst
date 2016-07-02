@@ -4,7 +4,7 @@
 .numero {
     position: relative;
     padding-left: 90px;
-    color: $grey_space;
+    color: $green_bunker;
     @include font-name('Neutraface2-Light');
     font-weight: 300;
     @include font-size(20px);
@@ -30,9 +30,19 @@
         left: 0;
         margin-top: -20px;
         margin-right: 60px;
-        color: $grey_space;
+        color: $green_bunker;
         @include font-name('BrandonGrotesque-Bold');
         font-weight: 700;
         @include font-size(68px);
     }
+}
+
+.pagination {
+    @include flexchild($flexshrink: 1, $flexbasis: 41.667%);
+    padding-left: 8.333%;
+    margin-bottom: 40px;
+}
+
+.numerotation {
+    display: inline-block;
 }
