@@ -68,6 +68,7 @@ var port 			= process.env.PORT || 8001;
 var orderFiles = {
 	scripts: [
 		basePaths.lib + 'jquery-1.12.4.js', // Jquery
+        basePaths.lib + 'jquery.easing.1.3.js', // Jquery easing
 		paths.js.src + 'main.js' // Javascript propre au site
 	],
 	styles: [

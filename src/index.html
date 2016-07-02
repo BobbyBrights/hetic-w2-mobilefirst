@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Prima Hôtel, détendez-vous le voyage ne fait que commencer">
+    <meta name="description" content="Yume Restaurant, détendez-vous le voyage ne fait que commencer">
     <meta name="author" content="Médrick">
-    <meta name="keywords" content="hôtel, réservation, site fictif">
+    <meta name="keywords" content="restaurant, réservation, site fictif">
 
-    <title>Hôtel Prima - Page d'accueil</title>
+    <title>Restaurant Yume - Page d'accueil</title>
 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 	<link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" />
@@ -27,7 +27,85 @@
 </head>
 <body>
 
-    <h1>Test</h1>
+    <header class="header">
+        <div class="header--topbar wrapper">
+            <div class="header--branding">
+                <img class="header--logo" src="img/default/logo_yume.png" srcset="img/default/logo_yume.png 1x, img/default/logo_yume@2x.png 2x" alt="Logo Restaurant Yume">
+            </div>
+            <div class="header--navigation">
+                <div class="header--menuMobile">
+                    <div class="burger">
+                        <div class="bars"></div>
+                    </div>
+                </div>
+                <div class="header--menuDesktop">
+                    <nav class="header--menu">
+                        <ul>
+                            <li><a href="">Restaurant</a></li>
+                            <li><a href="">Menu</a></li>
+                            <li><a href="">Services</a></li>
+                            <li><a href="">Photos</a></li>
+                            <li><a href="">Témoignages</a></li>
+                            <li><a href="">Contact</a></li>
+                            <hr/>
+                        </ul>
+                    </nav>
+                    <a href="#" class="btn airline">Réservation</a>
+                </div>
+            </div>
+        </div>
+        <div class="header--ads wrapper">
+            <h1 class="header--title">Commencez  le voyage</h1>
+            <h2 class="header--subtitle">Découvrez notre restaurant éphémère</h2>
+            <a href="#" class="btn airline">Découvrir</a>
+        </div>
+        <div class="header--next wrapper">
+            <a href="#main" class="header--slideDown page-scroll">
+                <img class="header--arrow" src="img/default/icon_arrow.png"  srcset="img/default/icon_arrow.png 1x, img/default/icon_arrow@2x.png 2x" alt="Flèche pour continuer">
+            </a>
+        </div>
+        <a class="header--booking btn" href="#">Réservation</a>
+    </header>
+
+    <main id="main" class="main">
+        <section class="restaurant">
+            <div class="wrapper">
+                <div class="restaurant--pagination gutters">
+                    <div class="restaurant--numerotation">
+                        <p class="restaurant--rubrique numero first">Notre<span>lieu</span></p>
+                    </div>
+                </div>
+                <div class="restaurant--intro gutters">
+                    <h2 class="restaurant--title">Le renouveau japonais</h2>
+                    <p class="restaurant--first">Connaissez-vous la défition du mot rêve en japonais ? Elle se traduit simplement... il s'agit de <strong>Yume</strong>. Venez rêver dans notre établissement.</p>
+                    <p class="restaurant--second">Notre chef cuisinier se fera un plaisir de vous accompagner vers les saveurs d'Asie en vous faisant découvrir une cuisine raffinée et contemporaine.</p>
+                    <div class="restaurant--infobar">
+                        <div class="restaurant--weather">
+                            <img src="img/default/icon_cloud.png" srcset="img/default/icon_cloud.png 1x, img/default/icon_cloud@2x.png 2x" alt="Icône météo">
+                            <p class="restaurant--temperature">28°C</p>
+                        </div>
+                        <div class="restaurant--clock">
+                            <img src="img/default/icon_clock.png" srcset="img/default/icon_clock.png 1x, img/default/icon_clock@2x.png 2x" alt="Icône horloge">
+                            <p class="restaurant--hour">15:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="menus">
+            <div class="wrapper">
+                <div class="menus--pagination gutters">
+                    <div class="menus--numerotation">
+                        <p class="menus--rubrique numero">Nos<span>menus</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="menus--gallery">
+                
+            </div>
+        </section>
+    </main>
 
 </body>
 </html>
