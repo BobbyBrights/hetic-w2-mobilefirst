@@ -9,7 +9,7 @@
 }
 
 .header--topbar {
-    @include flexcontainer($display: flex, $flexdirection: row);
+    @include flexcontainer($display: flex, $flexwrap: wrap, $alignitems: center);
     @include flexchild($alignself: flex-start);
     height: 80px;
 
@@ -21,26 +21,26 @@
 .header--branding,
 .header--navigation {
     @include flexcontainer($display: flex);
-    width: 50%;
+    @include flexchild($flexbasis: 50%);
     line-height: 80px;
 }
 
 .header--branding {
-    @include flexcontainer($alignitems: center, $justifycontent: flex-start);
+    @include flexcontainer($justifycontent: flex-start);
 
     img {
         width: 83px;
     }
 
     @media #{$medium} {
-        width: 10%;
+        @include flexchild($flexbasis: 10%);
     }
 }
 
 .header--navigation {
-    @include flexcontainer($alignitems: center, $justifycontent: flex-end);
+    @include flexcontainer($justifycontent: flex-end);
 
     @media #{$medium} {
-        width: 90%;
+        @include flexchild($flexbasis: 90%);
     }
 }

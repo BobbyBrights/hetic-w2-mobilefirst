@@ -15,6 +15,7 @@
 }
 
 .header--menu {
+    position: relative;
     display: inline-block;
     padding-right: 40px;
 
@@ -33,5 +34,19 @@
         font-weight: 300;
         @include font-size(14px);
         text-transform: uppercase;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    hr {
+        display: none;
+        position: absolute;
+        bottom: 10px;
+        height: 2px;
+        width: 28px;
+        background: $white;
+        border: 0;
     }
 }

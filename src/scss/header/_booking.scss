@@ -2,7 +2,7 @@
 
 .header--booking {
     @include flexcontainer($display: flex, $alignitems: center, $justifycontent: center);
-    @include flexchild($alignself: flex-end);
+    @include flexchild($alignself: flex-end, $flexshrink: 1);
     height: 60px;
     width: 100%;
     color: $white;
