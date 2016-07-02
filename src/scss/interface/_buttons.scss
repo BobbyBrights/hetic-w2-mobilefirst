@@ -1,1 +1,31 @@
 // BOUTONS //
+
+.btn {
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.airline {
+    @include flexchild($alignself: baseline);
+    padding: 13px 25px 10px 25px;
+    color: $white;
+    @include font-name('Neutraface2-Light');
+    font-weight: 300;
+    @include font-size(14px);
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid $white;
+    border-radius: 2px;
+    background: transparent;
+    transition: background 0.2s ease-in-out;
+
+    &:hover {
+        color: $grey_space;
+        background: $white;
+        transition: background 0.2s ease-in-out;
+    }
+}

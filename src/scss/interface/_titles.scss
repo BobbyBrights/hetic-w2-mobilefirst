@@ -1,3 +1,38 @@
 // TITRES //
 
 // Définition des blocs titre
+.numero {
+    position: relative;
+    padding-left: 90px;
+    color: $grey_space;
+    @include font-name('Neutraface2-Light');
+    font-weight: 300;
+    @include font-size(20px);
+    text-align: left;
+    text-transform: uppercase;
+
+    &.first {
+        padding-left: 78px;
+    }
+
+    span {
+        display: block;
+        margin-top: -5px;
+        margin-left: -2px;
+        @include font-size(36px);
+    }
+
+    &:before {
+        counter-increment: numero;
+        content: "0" counter(numero);
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: -20px;
+        margin-right: 60px;
+        color: $grey_space;
+        @include font-name('BrandonGrotesque-Bold');
+        font-weight: 700;
+        @include font-size(68px);
+    }
+}

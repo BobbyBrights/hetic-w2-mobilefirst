@@ -2,8 +2,8 @@
 
 // Définition du style des liens
 a {
-    @include font-name(Roboto-Bold);
-    color: $gold_tan;
+    color: $grey_space;
+    @include font-name(BrandonGrotesque-Bold);
     text-decoration: none;
 
     &:hover {
