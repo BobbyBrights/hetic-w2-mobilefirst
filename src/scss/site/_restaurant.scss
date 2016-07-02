@@ -1,14 +1,10 @@
 // RUBRIQUE RESTAURANT //
 
-.restaurant {
-    @include flexcontainer($display: flex, $flexdirection: row, $flexwrap: wrap);
-}
-
 .restaurant--pagination {
     margin-bottom: 40px;
-    
+
     @media #{$small} {
-        @include flexchild($flexshrink: 1, $flexbasis: 41.667%);
+        @include flexchild($flexbasis: 41.667%);
         padding-left: 8.333%;
     }
 }
@@ -18,39 +14,81 @@
 }
 
 .restaurant--intro {
-    @include flexcontainer($display: flex, $flexdirection: row, $flexwrap: wrap);
+    @include flexcontainer($display: flex, $flexwrap: wrap);
     @media #{$small} {
-        @include flexchild($flexshrink: 0, $flexbasis: 58.333%);
+        @include flexchild($flexbasis: 58.333%);
         padding-right: 8.333%;
     }
 }
 
 .restaurant--title {
-    @include flexchild($flexshrink: 0, $flexbasis: 100%);
+    @include flexchild($flexbasis: 100%);
     margin-bottom: 20px;
 
     @media #{$small} {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
 }
 
 .restaurant--first,
 .restaurant--second {
-    @media #{$small} {
-        @include flexchild($flexshrink: 0, $flexbasis: 50%);
+    @media #{$large} {
+        @include flexchild($flexbasis: 50%);
     }
 }
 
 .restaurant--first {
-    @media #{$small} {
+    @media #{$large} {
         padding-right: 15px;
     }
 }
 
 .restaurant--second {
-    display: none;
-
-    @media #{$small} {
+    @media #{$large} {
         padding-left: 15px;
+    }
+}
+
+.restaurant--infobar {
+    @include flexcontainer($display: flex);
+    margin-top: 20px;
+}
+
+.restaurant--weather,
+.restaurant--clock,
+.restaurant--temperature,
+.restaurant--hour {
+    display: inline-block;
+}
+
+.restaurant--clock,
+.restaurant--weather {
+    @include flexcontainer($display: flex, $alignitems: center);
+
+    img {
+        margin-right: 10px;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.restaurant--clock {
+    padding-left: 15px;
+}
+
+.restaurant--weather {
+    position: relative;
+    padding-right: 15px;
+
+    &:after {
+        content: "";
+        position: absolute;
+        height: 10px;
+        width: 1px;
+        top: 8px;
+        right: 0;
+        background: $grey_space;
     }
 }

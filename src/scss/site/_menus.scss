@@ -1,0 +1,8 @@
+// RUBRIQUE MENUS //
+
+.menus--pagination {
+    @media #{$small} {
+        @include flexchild($flexshrink: 1, $flexbasis: 41.667%);
+        padding-left: 8.333%;
+    }
+}
