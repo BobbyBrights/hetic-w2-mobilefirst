@@ -1,0 +1,46 @@
+// TOPBAR //
+
+.header {
+    @include flexcontainer($display: flex, $flexdirection: column);
+    height: 100%;
+    background: url('../img/desktop/header.jpg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.header--topbar {
+    @include flexcontainer($display: flex, $flexdirection: row);
+    @include flexchild($alignself: flex-start);
+    height: 80px;
+
+    @media #{$medium} {
+        padding-top: 3%;
+    }
+}
+
+.header--branding,
+.header--navigation {
+    @include flexcontainer($display: flex);
+    width: 50%;
+    line-height: 80px;
+}
+
+.header--branding {
+    @include flexcontainer($alignitems: center, $justifycontent: flex-start);
+
+    img {
+        width: 83px;
+    }
+
+    @media #{$medium} {
+        width: 10%;
+    }
+}
+
+.header--navigation {
+    @include flexcontainer($alignitems: center, $justifycontent: flex-end);
+
+    @media #{$medium} {
+        width: 90%;
+    }
+}

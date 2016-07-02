@@ -1,0 +1,35 @@
+// PHRASE ACCROCHE //
+
+.header--ads {
+    @include flexcontainer($display: flex, $flexdirection: column, $justifycontent: center);
+    @include flexchild($flexgrow: 1);
+    margin-bottom: 0;
+
+    @media #{$tiny} {
+        @include flexcontainer($justifycontent: flex-end);
+        margin-bottom: 220px;
+    }
+
+    @media #{$small} {
+        @include flexcontainer($justifycontent: flex-end);
+        margin-bottom: 140px;
+    }
+}
+
+.header--title,
+.header--subtitle {
+    color: $white;
+}
+
+.header--title {
+    color: $white;
+    @include font-name(Neutraface2-Demi);
+}
+
+.header--subtitle {
+    margin: -10px 10px 40px 2px;
+    color: $white;
+    @include font-name(BrandonGrotesque-Light);
+    font-weight: 300;
+    text-transform: none;
+}

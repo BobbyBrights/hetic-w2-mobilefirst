@@ -1,0 +1,17 @@
+// FLECHE BAS //
+
+.header--next {
+    display: none;
+
+    @media #{$small} {
+        @include flexcontainer($display: flex, $alignitems: center, $justifycontent: center);
+        @include flexchild($alignself: flex-end);
+        height: 100px;
+        width: 100%;
+        background: transparent;
+    }
+}
+
+.header--arrow {
+    width: 30px;
+}

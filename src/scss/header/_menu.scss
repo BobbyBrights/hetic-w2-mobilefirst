@@ -1,0 +1,37 @@
+// MENU DU HEADER //
+
+.header--menuMobile {
+    @media #{$medium} {
+        display: none;
+    }
+}
+
+.header--menuDesktop {
+    display: none;
+
+    @media #{$medium} {
+        display: inline-block;
+    }
+}
+
+.header--menu {
+    display: inline-block;
+    padding-right: 40px;
+
+    li {
+        display: inline-block;
+        list-style-type: none;
+
+        &:not(:first-child) {
+            padding-left: 25px;
+        }
+    }
+
+    a {
+        color: $white;
+        @include font-name('Neutraface2-Light');
+        font-weight: 300;
+        @include font-size(14px);
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,22 @@
+// RESERVATION //
+
+.header--booking {
+    @include flexcontainer($display: flex, $alignitems: center, $justifycontent: center);
+    @include flexchild($alignself: flex-end);
+    height: 60px;
+    width: 100%;
+    color: $white;
+    @include font-name(BrandonGrotesque-Light);
+    text-transform: uppercase;
+    background: $grey_space;
+    transition: background 0.2s ease-in-out;
+
+    &:hover {
+        background: lighten($grey_space, 5%);
+        transition: background 0.2s ease-in-out;
+    }
+
+    @media #{$small} {
+        display: none;
+    }
+}
