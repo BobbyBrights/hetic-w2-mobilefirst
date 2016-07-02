@@ -1,15 +1,11 @@
 // PHRASE ACCROCHE //
 
 .header--ads {
-    @include flexcontainer($display: flex, $flexwrap: wrap, $flexdirection: column, $justifycontent: center);
+    @include flexcontainer($display: flex, $flexdirection: column, $alignitems: flex-start, $justifycontent: center);
     @include flexchild($flexgrow: 1);
 
-    @media #{$tiny} {
-        @include flexcontainer($justifycontent: flex-end);
-        margin-bottom: 220px;
-    }
-
     @media #{$small} {
+        @include flexcontainer($justifycontent: flex-end);
         margin-bottom: 140px;
     }
 }

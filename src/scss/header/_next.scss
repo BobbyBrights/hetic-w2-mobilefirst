@@ -1,12 +1,11 @@
 // FLECHE BAS //
 
 .header--next {
-    @include flexcontainer($display: flex, $flexwrap: wrap);
+    @include flexcontainer($display: flex);
     display: none;
 
     @media #{$small} {
         @include flexcontainer($alignitems: center, $justifycontent: center);
-        @include flexchild($alignself: flex-end, $flexshrink: 1);
         height: 100px;
         width: 100%;
         background: transparent;

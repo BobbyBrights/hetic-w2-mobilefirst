@@ -1,16 +1,7 @@
 // TOPBAR //
 
-.header {
-    @include flexcontainer($display: flex, $flexdirection: column);
-    height: 100%;
-    background: url('../img/desktop/header.jpg') no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-
 .header--topbar {
-    @include flexcontainer($display: flex, $flexwrap: wrap, $alignitems: center);
-    @include flexchild($alignself: flex-start);
+    @include flexcontainer($display: flex, $alignitems: center);
     height: 80px;
 
     @media #{$medium} {
