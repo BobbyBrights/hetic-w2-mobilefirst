@@ -1,0 +1,64 @@
+// DETAILS RUBRIQUE MENUS //
+
+.formules--details {
+    @include flexcontainer($flexdirection: column, $alignitems: flex-start, $justifycontent: flex-end);
+
+    &.starter,
+    &.fish,
+    &.soup {
+        background-color: $green_bunker;
+        background-blend-mode: screen;
+    }
+
+    &.starter {
+        background-image: url("../img/default/photo_menu_01.jpg");
+    }
+
+    &.fish {
+        background-image: url("../img/default/photo_menu_02.jpg");
+    }
+
+    &.soup {
+        background-image: url("../img/default/photo_menu_03.jpg");
+    }
+}
+
+.formules--offer {
+    @include flexcontainer($flexdirection: column);
+    padding-top: 40px;
+
+    .formules--name {
+        @include font-size(26px);
+    }
+
+    &.offer {
+        background: $green_bunker;
+    }
+}
+
+.formules--name {
+    @include font-name(Neutraface2-Demi);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.formules--icon {
+    margin-right: 5px;
+}
+
+.formules--count {
+    margin-right: 10px;
+    @include font-size(12px);
+}
+
+.formules--price {
+    padding-top: 20px;
+    @include font-name(BrandonGrotesque-Light);
+    font-weight: 300;
+    @include font-size(26px);
+}
+
+.formules--mentions {
+    @include flexchild($alignself: flex-end);
+    @include font-size(12px);
+}

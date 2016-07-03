@@ -1,0 +1,43 @@
+// RUBRIQUE MENUS //
+
+.formules--gallery {
+    @include flexcontainer($display: flex, $flexdirection: column, $flexwrap: wrap);
+
+    @media #{$tiny} {
+        @include flexcontainer($flexdirection: inherit);
+    }
+}
+
+.formules--details,
+.formules--offer {
+    @include flexcontainer($display: flex);
+    margin: 0;
+    padding: 20px;
+    background-size: cover;
+    background-position: center center;
+    height: 200px;
+
+    p {
+        margin-bottom: 0;
+        color: $white;
+    }
+
+    span {
+        @include flexcontainer($display: flex, $alignitems: center);
+        margin-top: 5px;
+    }
+
+    img, p {
+        display: inline-block;
+    }
+
+    @media #{$tiny} {
+        @include flexchild($flexbasis: 50%);
+        height: 300px;
+    }
+
+    @media #{$large} {
+        @include flexchild($flexbasis: 25%);
+        height: 300px;
+    }
+}
