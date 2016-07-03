@@ -30,7 +30,7 @@ main {
     }
 }
 
-section, footer {
+section {
     padding-top: 40px;
     padding-bottom: 40px;
 
@@ -38,4 +38,9 @@ section, footer {
         padding-top: 50px;
         padding-bottom: 50px;
     }
+}
+
+footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
