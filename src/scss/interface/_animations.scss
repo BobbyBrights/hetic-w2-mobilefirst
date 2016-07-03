@@ -1,0 +1,10 @@
+// ANIMATIONS //
+
+@keyframes bounce {
+    from {
+        transform: translateY(5px);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
