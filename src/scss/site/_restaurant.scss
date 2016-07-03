@@ -1,21 +1,10 @@
 // RUBRIQUE RESTAURANT //
 
-.restaurant--pagination {
-    margin-bottom: 40px;
-
-    @media #{$small} {
-        @include flexchild($flexbasis: 41.667%);
-        padding-left: 8.333%;
-    }
-}
-
-.restaurant--numerotation {
-    display: inline-block;
-}
-
 .restaurant--intro {
     @include flexcontainer($display: flex, $flexwrap: wrap);
-    @media #{$small} {
+    @include flexchild($flexbasis: 100%);
+
+    @media #{$medium} {
         @include flexchild($flexbasis: 58.333%);
         padding-right: 8.333%;
     }
@@ -32,19 +21,21 @@
 
 .restaurant--first,
 .restaurant--second {
-    @media #{$large} {
+    @include flexchild($flexbasis: 100%);
+
+    @media #{$tiny} {
         @include flexchild($flexbasis: 50%);
     }
 }
 
 .restaurant--first {
-    @media #{$large} {
+    @media #{$tiny} {
         padding-right: 15px;
     }
 }
 
 .restaurant--second {
-    @media #{$large} {
+    @media #{$tiny} {
         padding-left: 15px;
     }
 }
@@ -89,6 +80,6 @@
         width: 1px;
         top: 8px;
         right: 0;
-        background: $grey_space;
+        background: $green_bunker;
     }
 }

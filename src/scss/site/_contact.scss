@@ -1,0 +1,56 @@
+// RUBRIQUE CONTACT //
+
+.contact--form,
+.contact--more {
+    @include flexchild($flexbasis: 100%);
+
+    @media #{$small} {
+        @include flexchild($flexbasis: 50%);
+    }
+}
+
+.contact--form {
+    @media #{$small} {
+        padding-left: 8.333%;
+    }
+}
+
+.contact--more {
+    @include flexcontainer($display: flex, $flexdirection: column, $justifycontent: center);
+    margin-top: 60px;
+
+    @media #{$small} {
+        padding-left: 16.667%;
+        margin-top: 0;
+    }
+}
+
+.contact--title,
+.contact--address {
+    @include font-size(20px);
+}
+
+.contact--title {
+    @include font-name('BrandonGrotesque-Medium');
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.contact--location {
+    margin-bottom: 50px;
+}
+
+.contact--tel,
+.contact--mail {
+    @include flexcontainer($display: flex, $alignitems: center);
+    margin-bottom: 10px;
+
+    img {
+        margin-right: 10px;
+    }
+
+    a {
+        @include font-name('BrandonGrotesque-Regular');
+        font-weight: 400;
+    }
+}

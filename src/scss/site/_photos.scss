@@ -1,0 +1,22 @@
+// RUBRIQUE PHOTOS //
+
+.photos--gallery {
+    @include flexcontainer($display: flex);
+}
+
+.photos--main {
+    @include flexchild($flexbasis: 50%);
+    height: 320px;
+    background-image: url("../img/default/photo_menu_01.jpg");
+}
+
+.photos--items {
+    @include flexcontainer($display: flex);
+    @include flexchild($flexbasis: 50%);
+}
+
+.photos--item {
+    @include flexchild($flexbasis: 50%);
+    height: 160px;
+    background-image: url("../img/default/photo_menu_01.jpg");
+}

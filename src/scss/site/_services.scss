@@ -1,0 +1,32 @@
+// RUBRIQUE SERVICES //
+
+.services--list,
+.services--item {
+    @include flexcontainer($display: flex);
+}
+
+.services--list {
+    @include flexcontainer($flexdirection: row, $flexwrap: wrap);
+    @include flexchild($flexgrow: 1);
+
+    @media #{$tiny} {
+        @include flexcontainer($flexdirection: inherit);
+        padding-left: 8.333%;
+        padding-right: 8.333%;
+    }
+}
+
+.services--item {
+    @include flexcontainer($flexdirection: column, $alignitems: center, $justifycontent: center);
+    @include flexchild($flexbasis: 50%);
+    margin-bottom: 40px;
+    text-align: center;
+
+    @media #{$large} {
+        @include flexchild($flexbasis: 33.333%);
+    }
+}
+
+.services--legend {
+    margin-top: 20px;
+}
