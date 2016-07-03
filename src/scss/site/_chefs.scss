@@ -1,0 +1,61 @@
+// RUBRIQUE TEMOIGNAGES //
+
+.chefs--portraits {
+    @include flexcontainer($display: flex, $flexdirection: column);
+    @include flexchild($flexgrow: 1);
+
+    @media #{$tiny} {
+        @include flexcontainer($flexdirection: inherit);
+    }
+
+    @media #{$small} {
+        padding-left: 8.333%;
+        padding-right: 8.333%;
+    }
+}
+
+.chefs--left,
+.chefs--right {
+    @include flexchild($flexbasis: 100%);
+
+    @media #{$small} {
+        @include flexchild($flexbasis: 50%);
+    }
+}
+
+.chefs--right {
+    margin-top: 40px;
+
+    @media #{$tiny} {
+        margin-top: 0;
+    }
+}
+
+.chefs--testimony {
+    margin-bottom: 20px;
+    @include font-name(BrandonGrotesque-LightItalic);
+    font-weight: 300;
+
+    @media #{$tiny} {
+        margin-bottom: 40px;
+    }
+}
+
+.chefs--portrait {
+    @include flexcontainer($display: flex, $alignitems: center);
+
+    img {
+        margin-right: 10px;
+    }
+}
+
+.chefs--name,
+.chefs--function {
+    margin-bottom: 0;
+    line-height: 18px;
+}
+
+.chefs--name {
+    @include font-name(BrandonGrotesque-Regular);
+    font-weight: 400;
+}

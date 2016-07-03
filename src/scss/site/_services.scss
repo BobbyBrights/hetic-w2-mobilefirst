@@ -25,6 +25,12 @@
     @media #{$large} {
         @include flexchild($flexbasis: 33.333%);
     }
+
+    span {
+        @include flexcontainer($flexdirection: column, $alignitems: center, $justifycontent: flex-end);
+        height: 60px;
+        width: 100%;
+    }
 }
 
 .services--legend {

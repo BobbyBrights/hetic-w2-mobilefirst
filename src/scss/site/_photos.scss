@@ -1,22 +1,54 @@
 // RUBRIQUE PHOTOS //
 
 .photos--gallery {
-    @include flexcontainer($display: flex);
+    @include flexcontainer($display: flex, $flexdirection: column);
+
+    @media #{$medium} {
+        @include flexcontainer($flexdirection: inherit);
+    }
+}
+
+.photos--main,
+.photos--item {
+    height: 200px;
+    background-color: $green_bunker;
+    background-blend-mode: screen;
 }
 
 .photos--main {
-    @include flexchild($flexbasis: 50%);
-    height: 320px;
-    background-image: url("../img/default/photo_menu_01.jpg");
+    @include flexchild($flexbasis: 100%);
+    background-image: url("../img/formules/formule_01.jpg");
+
+    @media #{$small} {
+        height: 400px;
+    }
+
+    @media #{$medium} {
+        @include flexchild($flexbasis: 33.333%);
+    }
 }
 
 .photos--items {
-    @include flexcontainer($display: flex);
-    @include flexchild($flexbasis: 50%);
+    @include flexchild($flexbasis: 100%);
+
+    @media #{$small} {
+        @include flexcontainer($display: flex, $flexdirection: row, $flexwrap: wrap);
+    }
+
+    @media #{$medium} {
+        @include flexchild($flexbasis: 66.667%);
+    }
 }
 
 .photos--item {
-    @include flexchild($flexbasis: 50%);
-    height: 160px;
-    background-image: url("../img/default/photo_menu_01.jpg");
+    @include flexchild($flexbasis: 100%);
+    background-image: url("../img/formules/formule_01.jpg");
+
+    @media #{$small} {
+        @include flexchild($flexbasis: 50%);
+    }
+
+    @media #{$medium} {
+        @include flexchild($flexbasis: 33.333%);
+    }
 }
