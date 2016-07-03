@@ -29,3 +29,13 @@
         transition: background 0.2s ease-in-out;
     }
 }
+
+.inverse {
+    color: $green_bunker;
+    border: 1px solid $green_bunker;
+
+    &:hover {
+        color: $white;
+        background: $green_bunker;
+    }
+}
