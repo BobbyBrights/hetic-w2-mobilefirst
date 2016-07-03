@@ -3,23 +3,36 @@
 // Définition des blocs titre
 .numero {
     position: relative;
-    padding-left: 90px;
+    padding-left: 70px;
     color: $green_bunker;
     @include font-name('Neutraface2-Light');
     font-weight: 300;
-    @include font-size(20px);
+    @include font-size(18px);
     text-align: left;
     text-transform: uppercase;
 
+    @media #{$small} {
+        padding-left: 90px;
+        @include font-size(20px);
+    }
+
     &.first {
-        padding-left: 78px;
+        padding-left: 62px;
+
+        @media #{$small} {
+            padding-left: 78px;
+        }
     }
 
     span {
         display: block;
         margin-top: -5px;
         margin-left: -2px;
-        @include font-size(36px);
+        @include font-size(24px);
+
+        @media #{$small} {
+            @include font-size(36px);
+        }
     }
 
     &:before {
@@ -28,19 +41,33 @@
         position: absolute;
         top: 0;
         left: 0;
-        margin-top: -20px;
+        margin-top: -16px;
         margin-right: 60px;
         color: $green_bunker;
         @include font-name('BrandonGrotesque-Bold');
         font-weight: 700;
-        @include font-size(68px);
+        @include font-size(50px);
+
+        @media #{$small} {
+            margin-top: -20px;
+            margin-right: 60px;
+            @include font-size(68px);
+        }
     }
 }
 
 .pagination {
-    @include flexchild($flexshrink: 1, $flexbasis: 41.667%);
-    padding-left: 8.333%;
+    @include flexchild($flexbasis: 100%);
     margin-bottom: 40px;
+    margin-left: -3px;
+
+    @media #{$small} {
+        @include flexchild($flexbasis: 41.667%);
+    }
+
+    @media #{$large} {
+        padding-left: 8.333%;
+    }
 }
 
 .numerotation {
