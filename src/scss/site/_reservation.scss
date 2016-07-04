@@ -1,7 +1,7 @@
 // POPIN RESERVATION //
 
 .reservation {
-    @include flexcontainer($display: flex);
+    @include flexcontainer($display: flex, $flexdirection: column, $alignitems: center, $justifycontent: center);
     position: fixed;
     height: 100%;
     width: 100%;
@@ -22,12 +22,6 @@
     @include flexcontainer($display: inline-flex, $flexdirection: column, $justifycontent: center);
     margin-top: 50px;
 
-    p {
-        color: $white;
-        @include font-size(14px);
-        text-transform: uppercase;
-    }
-
     .btn {
         @include flexchild($alignself: center);
         margin: 10px;
@@ -35,6 +29,13 @@
         @media (min-width: 570px) {
             @include flexchild($alignself: flex-end);
         }
+    }
+
+    hr {
+        position: relative;
+        width: 100%;
+        height: 1px;
+        margin: 40px 0;
     }
 }
 
@@ -49,9 +50,42 @@
 .reservation--date,
 .reservation--hour,
 .reservation--guest {
+    @include flexcontainer($display: flex, $flexdirection: column, $alignitems: center, $justifycontent: center);
+    position: relative;
     height: 150px;
     width: 120px;
     margin: 10px;
     padding: 10px;
     border: 1px solid $white;
+}
+
+.reservation--title,
+.reservation--number,
+.reservation--suffix {
+    margin-bottom: 0;
+    color: $white;
+}
+
+.reservation--title {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    left: 0;
+    @include font-size(12px);
+    text-transform: uppercase;
+}
+
+.reservation--number {
+    @include font-name(Neutraface2-Demi);
+    font-weight: 500;
+    @include font-size(40px);
+    text-transform: uppercase;
+}
+
+.reservation--suffix {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    @include font-size(12px);
 }

@@ -53,3 +53,9 @@ p {
         @include font-size(18px);
     }
 }
+
+// Style des hr
+hr {
+    background: $white;
+    border: 0;
+}

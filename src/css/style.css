@@ -376,6 +376,10 @@ p {
       font-size: 18px;
       font-size: 1.125rem; } }
 
+hr {
+  background: #FFFFFF;
+  border: 0; }
+
 .flex-container {
   margin-right: auto;
   margin-left: auto;
@@ -763,9 +767,7 @@ input[type="submit"] {
     position: absolute;
     bottom: 10px;
     height: 2px;
-    width: 28px;
-    background: #FFFFFF;
-    border: 0; }
+    width: 28px; }
 
 .header--ads {
   display: -ms-flexbox;
@@ -1305,6 +1307,18 @@ input[type="submit"] {
   display: -moz-flex;
   display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-ieflexvalue(flex-direction): ieflexvalue(column);
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-ieflexvalue(justify-content): ieflexvalue(center);
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-ieflexvalue(align-items): ieflexvalue(center);
+  align-items: center;
   position: fixed;
   height: 100%;
   width: 100%;
@@ -1332,11 +1346,6 @@ input[type="submit"] {
   -ms-ieflexvalue(justify-content): ieflexvalue(center);
   justify-content: center;
   margin-top: 50px; }
-  .reservation--box p {
-    color: #FFFFFF;
-    font-size: 14px;
-    font-size: 0.875rem;
-    text-transform: uppercase; }
   .reservation--box .btn {
     -webkit-flex: 0 1 auto;
     -moz-flex: 0 1 auto;
@@ -1357,6 +1366,11 @@ input[type="submit"] {
         -moz-align-self: flex-end;
         -ms-ieflexvalue(align-self): ieflexvalue(flex-end);
         align-self: flex-end; } }
+  .reservation--box hr {
+    position: relative;
+    width: 100%;
+    height: 1px;
+    margin: 40px 0; }
 
 .reservation--select {
   display: -ms-flexbox;
@@ -1389,11 +1403,58 @@ input[type="submit"] {
 .reservation--date,
 .reservation--hour,
 .reservation--guest {
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-ieflexvalue(flex-direction): ieflexvalue(column);
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-ieflexvalue(justify-content): ieflexvalue(center);
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-ieflexvalue(align-items): ieflexvalue(center);
+  align-items: center;
+  position: relative;
   height: 150px;
   width: 120px;
   margin: 10px;
   padding: 10px;
   border: 1px solid #FFFFFF; }
+
+.reservation--title,
+.reservation--number,
+.reservation--suffix {
+  margin-bottom: 0;
+  color: #FFFFFF; }
+
+.reservation--title {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  left: 0;
+  font-size: 12px;
+  font-size: 0.75rem;
+  text-transform: uppercase; }
+
+.reservation--number {
+  font-family: "Neutraface2-Demi", "Arial", "Sans Serif";
+  font-weight: 500;
+  font-size: 40px;
+  font-size: 2.5rem;
+  text-transform: uppercase; }
+
+.reservation--suffix {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  font-size: 12px;
+  font-size: 0.75rem; }
 
 .formules--gallery {
   display: -ms-flexbox;
