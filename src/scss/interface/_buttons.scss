@@ -1,6 +1,7 @@
 // BOUTONS //
 
 .btn {
+    position: relative;
     cursor: pointer;
     text-decoration: none;
 
@@ -13,7 +14,7 @@
     @include flexchild($alignself: baseline);
     padding: 13px 25px 10px 25px;
     color: $white;
-    @include font-name('Neutraface2-Light');
+    @include font-name(Neutraface2-Light);
     font-weight: 300;
     @include font-size(14px);
     text-transform: uppercase;

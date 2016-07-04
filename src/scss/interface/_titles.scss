@@ -5,7 +5,7 @@
     position: relative;
     padding-left: 70px;
     color: $green_bunker;
-    @include font-name('Neutraface2-Light');
+    @include font-name(Neutraface2-Light);
     font-weight: 300;
     @include font-size(18px);
     text-align: left;
@@ -44,7 +44,7 @@
         margin-top: -16px;
         margin-right: 60px;
         color: $green_bunker;
-        @include font-name('BrandonGrotesque-Bold');
+        @include font-name(BrandonGrotesque-Bold);
         font-weight: 700;
         @include font-size(50px);
 

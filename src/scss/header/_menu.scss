@@ -30,7 +30,7 @@
 
     a {
         color: $white;
-        @include font-name('Neutraface2-Light');
+        @include font-name(Neutraface2-Light);
         font-weight: 300;
         @include font-size(14px);
         text-transform: uppercase;
