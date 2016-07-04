@@ -9,10 +9,8 @@
 }
 
 .photos--main,
-.photos--item {
+.photos--element {
     height: 200px;
-    background-color: $green_bunker;
-    background-blend-mode: screen;
 }
 
 .photos--main {
@@ -40,9 +38,10 @@
     }
 }
 
-.photos--item {
+.photos--element {
     @include flexchild($flexbasis: 100%);
-    background-image: url("../img/formules/formule_01.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 
     @media #{$small} {
         @include flexchild($flexbasis: 50%);
@@ -50,5 +49,30 @@
 
     @media #{$medium} {
         @include flexchild($flexbasis: 33.333%);
+    }
+
+    // Lorsque la galerie est dynamisée cette solution est inline dans le HTML
+    &.one {
+        background-image: url("../img/restaurant/restaurant_01.jpg");
+    }
+
+    &.two {
+        background-image: url("../img/restaurant/restaurant_02.jpg");
+    }
+
+    &.three {
+        background-image: url("../img/restaurant/restaurant_03.jpg");
+    }
+
+    &.four {
+        background-image: url("../img/restaurant/restaurant_04.jpg");
+    }
+
+    &.five {
+        background-image: url("../img/restaurant/restaurant_05.jpg");
+    }
+
+    &.six {
+        background-image: url("../img/restaurant/restaurant_06.jpg");
     }
 }

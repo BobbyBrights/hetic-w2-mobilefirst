@@ -3,27 +3,21 @@
 .formules--details {
     @include flexcontainer($flexdirection: column, $alignitems: flex-start, $justifycontent: flex-end);
 
-    &.starter,
-    &.fish,
-    &.soup {
-        background-color: $green_bunker;
-        background-blend-mode: screen;
-    }
-
     &.starter {
-        background-image: url("../img/default/photo_menu_01.jpg");
+        background-image: url("../img/formules/formule_01.jpg");
     }
 
     &.fish {
-        background-image: url("../img/default/photo_menu_02.jpg");
+        background-image: url("../img/formules/formule_02.jpg");
     }
 
     &.soup {
-        background-image: url("../img/default/photo_menu_03.jpg");
+        background-image: url("../img/formules/formule_03.jpg");
     }
 }
 
 .formules--offer {
+    position: relative;
     @include flexcontainer($flexdirection: column);
     padding-top: 40px;
 
@@ -58,7 +52,12 @@
     @include font-size(26px);
 }
 
+.formules--promo {
+    line-height: 18px;
+}
+
 .formules--mentions {
-    @include flexchild($alignself: flex-end);
+    position: absolute;
+    bottom: 20px;
     @include font-size(12px);
 }
