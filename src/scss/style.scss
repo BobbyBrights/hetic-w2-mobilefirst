@@ -4,7 +4,6 @@
 // Configuration
 @import "conf/reset";
 @import "conf/normalize";
-@import "conf/helpers";
 @import "conf/fonts";
 @import "conf/colors";
 @import "conf/mediaqueries";
@@ -12,17 +11,35 @@
 
 // Classes communes à  tout le document
 @import "general/general";
+@import "general/helpers";
 
 // Elements de l'interface
-@import "interface/menu";
+@import "interface/animations";
 @import "interface/burger";
 @import "interface/buttons";
 @import "interface/links";
 @import "interface/form";
 @import "interface/titles";
-@import "interface/helpers";
+@import "interface/background";
+@import "interface/separation";
 
 // Structure du site
 @import "header/header";
-@import "site/home";
+@import "header/topbar";
+@import "header/menu";
+@import "header/advertising";
+@import "header/next";
+@import "header/booking";
+
+@import "site/restaurant";
+@import "site/services";
+@import "site/photos";
+@import "site/chefs";
+@import "site/contact";
+@import "site/reservation";
+
+@import "formules/formules";
+@import "formules/details";
+@import "formules/animations";
+
 @import "footer/footer";
