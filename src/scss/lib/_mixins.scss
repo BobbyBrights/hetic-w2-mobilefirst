@@ -28,10 +28,10 @@ $root-font-size: 16px;
 
 // Permet de rajouter des polices par défaut
 @mixin font-name($fontname) {
-    font-family: '#{$fontname}', 'Arial', 'Sans Serif';
+    font-family: "#{$fontname}", "Arial", "Sans Serif";
 }
 
-// Mixins propres aux flexbox
+// Mixins propre aux flexbox
 @mixin flexcontainer($display: flex, $flexdirection: false, $flexwrap: false, $justifycontent: false, $alignitems: false, $aligncontent: false) {
     // $display: flex | inline-flex
     // $flexdirection: row(default) | row-reverse | column | column-reverse

@@ -1,0 +1,57 @@
+// POPIN RESERVATION //
+
+.reservation {
+    @include flexcontainer($display: flex);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    background: $green_bunker;
+    z-index: 2;
+
+    h1 {
+        color: $white;
+    }
+}
+
+.reservation--box {
+    @include flexcontainer($display: inline-flex, $flexdirection: column, $justifycontent: center);
+    margin-top: 50px;
+
+    p {
+        color: $white;
+        @include font-size(14px);
+        text-transform: uppercase;
+    }
+
+    .btn {
+        @include flexchild($alignself: center);
+        margin: 10px;
+
+        @media (min-width: 570px) {
+            @include flexchild($alignself: flex-end);
+        }
+    }
+}
+
+.reservation--select {
+    @include flexcontainer($display: flex, $flexwrap: wrap, $flexdirection: column, $justifycontent: center);
+
+    @media (min-width: 570px) {
+        @include flexcontainer($flexdirection: row);
+    }
+}
+
+.reservation--date,
+.reservation--hour,
+.reservation--guest {
+    height: 150px;
+    width: 120px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid $white;
+}
