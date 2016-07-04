@@ -1,1 +1,24 @@
 // FORMULAIRE //
+
+label {
+    display: block;
+    @include font-name(BrandonGrotesque-Light);
+    font-weight: 300;
+    @include font-size(16px);
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    margin-bottom: 40px;
+    @include font-name(BrandonGrotesque-Medium);
+    font-weight: 500;
+    @include font-size(18px);
+    border: 0;
+    border-bottom: 1px solid $green_bunker;
+    outline: 0;
+}
+
+input[type="submit"] {
+    float: right;
+}
