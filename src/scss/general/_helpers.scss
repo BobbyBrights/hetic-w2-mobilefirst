@@ -1,17 +1,27 @@
 // HELPERS //
 
 // Wrapper pour contenir l'ensemble du site
-.wrapper {
-    @include flexcontainer($display: flex, $flexwrap: wrap);
-    width: 90%;
+.flex-container {
     margin-right: auto;
     margin-left: auto;
     padding-right: 15px;
     padding-left: 15px;
 
+    @media #{$tiny} {
+        width: 90%;
+    }
+
     @media #{$large} {
         max-width: 1200px;
     }
+}
+
+// Annulation des gouttières
+.flex-row {
+    @include flexcontainer($display: flex, $flexwrap: wrap);
+    @include flexchild($flexshrink: 1);
+    margin-right: -15px;
+    margin-left: -15px;
 }
 
 // Ajout de gouttières
@@ -20,7 +30,9 @@
     padding-left: 15px;
 }
 
-.row {
-    margin-right: -15px;
-    margin-left: -15px;
+// Images responsive
+.img-responsive {
+    display: block;
+    width: 100%;
+    height: auto;
 }

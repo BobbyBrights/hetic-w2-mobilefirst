@@ -1,0 +1,28 @@
+// SEPARATION //
+
+.restaurant,
+.services {
+    position: relative;
+    
+    &:after,
+    &:before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 30px;
+        bottom: 0;
+        background: $green_bunker;
+
+        @media #{$small} {
+            width: 100px;
+        }
+    }
+
+    &:before {
+        left: 0;
+    }
+
+    &:after {
+        right: 0;
+    }
+}
