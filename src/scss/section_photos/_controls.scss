@@ -1,0 +1,15 @@
+// BOUTONS CONTROLE //
+
+.photos--controls {
+    @include flexcontainer($display: flex, $alignitems: center, $justifycontent: center);
+    padding: 20px;
+}
+
+.photos--button {
+    height: 15px;
+    width: 15px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 50%;
+    background: $green_bunker;
+}

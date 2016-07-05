@@ -1,0 +1,9 @@
+// RUBRIQUE PHOTOS //
+
+.photos--gallery {
+    @include flexcontainer($display: flex, $flexdirection: column);
+
+    @media #{$medium} {
+        @include flexcontainer($flexdirection: inherit);
+    }
+}

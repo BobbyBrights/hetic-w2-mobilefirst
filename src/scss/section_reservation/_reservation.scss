@@ -1,8 +1,9 @@
 // POPIN RESERVATION //
 
 .reservation {
-    @include flexcontainer($display: flex, $flexdirection: column, $alignitems: center, $justifycontent: center);
+    @include flexcontainer($flexdirection: column, $alignitems: center, $justifycontent: flex-start);
     position: fixed;
+    display: none;
     height: 100%;
     width: 100%;
     left: 0;
@@ -11,15 +12,22 @@
     bottom: 0;
     text-align: center;
     background: $green_bunker;
-    z-index: 2;
+    overflow: auto;
+    z-index: 3;
 
-    h1 {
+    @media (min-width: 570px ){
+        @include flexcontainer($justifycontent: center);
+        display: none;
+    }
+
+    h1, p {
         color: $white;
     }
 }
 
 .reservation--box {
     @include flexcontainer($display: inline-flex, $flexdirection: column, $justifycontent: center);
+    position: relative;
     margin-top: 50px;
 
     .btn {
@@ -35,12 +43,12 @@
         position: relative;
         width: 100%;
         height: 1px;
-        margin: 40px 0;
+        margin: 40px 0 15px 0;
     }
 }
 
 .reservation--select {
-    @include flexcontainer($display: flex, $flexwrap: wrap, $flexdirection: column, $justifycontent: center);
+    @include flexcontainer($display: flex, $flexwrap: wrap, $flexdirection: column, $alignitems: center, $justifycontent: center);
 
     @media (min-width: 570px) {
         @include flexcontainer($flexdirection: row);
@@ -88,4 +96,43 @@
     bottom: 10px;
     left: 0;
     @include font-size(12px);
+}
+
+.reservation--infos {
+    @include flexcontainer($display: flex, $flexdirection: column);
+
+    @media (min-width: 570px) {
+        @include flexcontainer($flexdirection: row);
+    }
+}
+
+.reservation--mail,
+.reservation--tel {
+    @include flexcontainer($display: flex, $alignitems: center, $justifycontent: center);
+    @include flexchild($flexbasis: 50%);
+
+    img {
+        margin-right: 10px;
+    }
+
+    a {
+        color: $white;
+        @include font-name(BrandonGrotesque-Light);
+        font-weight: 300;
+    }
+}
+
+.reservation--tel {
+    margin-bottom: 10px;
+
+    @media (min-width: 570px) {
+        @include flexcontainer($justifycontent: flex-start);
+        margin-bottom: 0;
+    }
+}
+
+.reservation--mail {
+    @media (min-width: 570px) {
+        @include flexcontainer($justifycontent: flex-end);
+    }
 }

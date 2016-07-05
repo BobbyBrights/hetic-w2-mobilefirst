@@ -1,6 +1,6 @@
 // ANIMATIONS RUBRIQUE MENUS //
 
-.formules--details {
+.menus--details {
     @media #{$small} {
         figcaption {
             opacity: 0;
@@ -10,7 +10,7 @@
             transform: translate3d(0,40px,0);
         }
 
-        .formules--name {
+        .menus--name {
             -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
             transition: opacity 0.35s, transform 0.35s;
             -webkit-transform: translate3d(0,80px,0);
@@ -25,7 +25,7 @@
             transform: translate3d(0,0,0);
         }
 
-        .formules--name {
+        .menus--name {
             -webkit-transform: translate3d(0,0,0);
             transform: translate3d(0,0,0)
         }

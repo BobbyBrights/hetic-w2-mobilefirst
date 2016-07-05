@@ -3,9 +3,14 @@
 .header {
     @include flexcontainer($display: flex, $flexdirection: column);
     height: 100%;
-    background: url('../img/desktop/header.jpg') no-repeat;
+    background-image: url('../img/header/header_mobile.jpg');
+    background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+
+    @media #{$small} {
+        background-image: url('../img/header/header.jpg');
+    }
 
     .flex-container {
         @include flexcontainer($display: flex, $flexdirection: column);

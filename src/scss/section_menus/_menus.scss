@@ -1,6 +1,6 @@
 // RUBRIQUE MENUS //
 
-.formules--gallery {
+.menus--gallery {
     @include flexcontainer($display: flex, $flexdirection: column, $flexwrap: wrap);
 
     @media #{$tiny} {
@@ -8,8 +8,8 @@
     }
 }
 
-.formules--details,
-.formules--offer {
+.menus--details,
+.menus--offer {
     @include flexcontainer($display: flex);
     margin: 0;
     padding: 20px;

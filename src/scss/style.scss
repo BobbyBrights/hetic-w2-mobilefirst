@@ -22,6 +22,8 @@
 @import "interface/titles";
 @import "interface/background";
 @import "interface/separation";
+@import "interface/close";
+@import "interface/overlay";
 
 // Structure du site
 @import "header/header";
@@ -31,15 +33,20 @@
 @import "header/next";
 @import "header/booking";
 
-@import "site/restaurant";
-@import "site/services";
-@import "site/photos";
-@import "site/chefs";
-@import "site/contact";
-@import "site/reservation";
+@import "section_restaurant/restaurant";
+@import "section_services/services";
 
-@import "formules/formules";
-@import "formules/details";
-@import "formules/animations";
+@import "section_photos/gallery";
+@import "section_photos/photos";
+@import "section_photos/backgrounds";
+@import "section_photos/controls";
+
+@import "section_chefs/chefs";
+@import "section_contact/contact";
+@import "section_reservation/reservation";
+
+@import "section_menus/menus";
+@import "section_menus/details";
+@import "section_menus/animations";
 
 @import "footer/footer";

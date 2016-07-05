@@ -1,0 +1,46 @@
+// ELEMENTS PHOTOS //
+
+.photos--main,
+.photos--element {
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.photos--main {
+    @include flexchild($flexbasis: 100%);
+
+    @media #{$small} {
+        height: 600px;
+    }
+
+    @media #{$medium} {
+        @include flexchild($flexbasis: 33.333%);
+    }
+}
+
+.photos--items {
+    @include flexcontainer($display: flex, $flexdirection: row, $flexwrap: wrap);
+
+    @media #{$medium} {
+        @include flexchild($flexbasis: 66.667%);
+    }
+}
+
+.photos--element {
+    @include flexchild($flexbasis: 50%);
+
+    &:nth-child(n+3) {
+        display: none;
+    }
+
+    @media #{$small} {
+        &:nth-child(n+3) {
+            display: block;
+        }
+    }
+
+    @media #{$medium} {
+        @include flexchild($flexbasis: 33.333%);
+    }
+}

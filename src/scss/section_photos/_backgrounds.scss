@@ -1,0 +1,41 @@
+// BACKGROUND TEMPORAIRE //
+
+// Si la galerie est dynamisée cette solution sera différente.
+
+.photos--main {
+    background-image: url("../img/restaurant/restaurant_01_mob.jpg");
+
+    @media #{$medium} {
+        background-image: url("../img/restaurant/restaurant_01.jpg");
+    }
+
+    @media #{$large} {
+        background-image: url("../img/restaurant/restaurant_01_large.jpg");
+    }
+}
+
+.photos--element {
+    &.one {
+        background-image: url("../img/restaurant/restaurant_09.jpg");
+    }
+
+    &.two {
+        background-image: url("../img/restaurant/restaurant_02.jpg");
+    }
+
+    &.three {
+        background-image: url("../img/restaurant/restaurant_04.jpg");
+    }
+
+    &.four {
+        background-image: url("../img/restaurant/restaurant_05.jpg");
+    }
+
+    &.five {
+        background-image: url("../img/restaurant/restaurant_08.jpg");
+    }
+
+    &.six {
+        background-image: url("../img/restaurant/restaurant_03.jpg");
+    }
+}
