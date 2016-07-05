@@ -26,9 +26,13 @@
 }
 
 .reservation--box {
-    @include flexcontainer($display: inline-flex, $flexdirection: column, $justifycontent: center);
+    @include flexcontainer($display: flex, $flexdirection: column, $justifycontent: center);
     position: relative;
     margin-top: 50px;
+
+    @media (min-width: 570px) {
+        @include flexcontainer($display: inline-flex);
+    }
 
     .btn {
         @include flexchild($alignself: center);
@@ -48,7 +52,11 @@
 }
 
 .reservation--select {
-    @include flexcontainer($display: flex, $flexwrap: wrap, $flexdirection: column, $alignitems: center, $justifycontent: center);
+    @include flexcontainer($display: flex, $flexwrap: nowrap, $flexdirection: column, $alignitems: center, $justifycontent: center);
+
+    @media #{$small} {
+        @include flexcontainer($flexwrap: wrap);
+    }
 
     @media (min-width: 570px) {
         @include flexcontainer($flexdirection: row);
