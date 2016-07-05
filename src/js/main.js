@@ -3,16 +3,7 @@ jQuery(document).ready(function() {
     toggle_burger();
     sliding_menu();
     scroll_content();
-});
-
-// DOCUMENT LOAD //
-jQuery(window).load(function() {
-
-});
-
-// DOCUMENT RESIZE //
-jQuery(window).resize(function() {
-
+    open_reservation();
 });
 
 // DOCUMENT SCROLL //
@@ -72,4 +63,16 @@ function scroll_content() {
 		var speed = 800; // Durée de l'animation (en ms)
 		$('html, body').animate({scrollTop: $(page).offset().top}, speed);
 	});
+}
+
+function open_reservation() {
+    $('.popin-resa').click(function(e) {
+        e.preventDefault();
+        var $this = $('.reservation');
+        if ($this.hasClass('open')) {
+            $this.css('display', 'none').removeClass('open');
+        } else {
+            $this.css('display', 'flex').addClass('open');
+        }
+    });
 }
