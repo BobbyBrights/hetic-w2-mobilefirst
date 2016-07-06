@@ -1,10 +1,48 @@
 // ANIMATIONS //
 
+// Animation pour la flèche du header
 @keyframes bounce {
     from {
         transform: translateY(5px);
     }
     to {
         transform: translateY(-10px);
+    }
+}
+
+// Animation fade
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
