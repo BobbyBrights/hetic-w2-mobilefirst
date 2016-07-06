@@ -1,0 +1,20 @@
+// BOUTON SCROLL TO TOP //
+
+.scroll-top {
+    position: fixed;
+    display: none;
+    width: 50px;
+    height: 50px;
+    bottom: 0;
+    right: 0;
+    background-image: url('../img/icons/icon_scrolltop.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $green_bunker;
+    background-size: 20px 20px;
+    z-index: 4;
+
+    @media #{$retina} {
+        background-image: url('../img/icons/icon_scrolltop@2x.png');
+    }
+}

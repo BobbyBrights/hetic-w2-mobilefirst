@@ -23,7 +23,7 @@
 @import "interface/background";
 @import "interface/separation";
 @import "interface/close";
-@import "interface/overlay";
+@import "interface/scrolltop";
 
 // Structure du site
 @import "header/header";
@@ -43,7 +43,10 @@
 
 @import "section_chefs/chefs";
 @import "section_contact/contact";
+
 @import "section_reservation/reservation";
+@import "section_reservation/box";
+@import "section_reservation/infos";
 
 @import "section_menus/menus";
 @import "section_menus/details";
