@@ -64,10 +64,6 @@
     @media #{$small} {
         @include flexchild($flexbasis: 41.667%);
     }
-
-    // @media #{$large} {
-    //     padding-left: 8.333%;
-    // }
 }
 
 .numerotation {

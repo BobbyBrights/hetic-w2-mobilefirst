@@ -6,7 +6,6 @@
 
     @media #{$medium} {
         @include flexchild($flexbasis: 58.333%);
-        // padding-right: 8.333%;
     }
 }
 
