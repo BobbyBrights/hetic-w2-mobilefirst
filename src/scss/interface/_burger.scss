@@ -11,6 +11,7 @@ $bar-spacing: 8px;
     height: $bar-height + $bar-spacing*2;
     padding-top: 5px;
     cursor: pointer;
+    z-index: 5;
 }
 
 .bars,
