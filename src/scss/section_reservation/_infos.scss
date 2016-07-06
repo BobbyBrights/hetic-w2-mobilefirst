@@ -1,0 +1,40 @@
+// INFOS DU MODULE RESERVATION //
+
+.reservation--infos {
+    @include flexcontainer($display: flex, $flexdirection: column);
+
+    @media (min-width: 570px) {
+        @include flexcontainer($flexdirection: row);
+    }
+}
+
+.reservation--mail,
+.reservation--tel {
+    @include flexcontainer($display: flex, $alignitems: center, $justifycontent: center);
+    @include flexchild($flexbasis: 50%);
+
+    img {
+        margin-right: 10px;
+    }
+
+    a {
+        color: $white;
+        @include font-name(BrandonGrotesque-Light);
+        font-weight: 300;
+    }
+}
+
+.reservation--tel {
+    margin-bottom: 10px;
+
+    @media (min-width: 570px) {
+        @include flexcontainer($justifycontent: flex-start);
+        margin-bottom: 0;
+    }
+}
+
+.reservation--mail {
+    @media (min-width: 570px) {
+        @include flexcontainer($justifycontent: flex-end);
+    }
+}

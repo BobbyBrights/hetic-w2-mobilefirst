@@ -1,0 +1,61 @@
+// CONTENU DES BOX //
+
+.reservation--date,
+.reservation--hour,
+.reservation--guest {
+    @include flexcontainer($display: flex, $flexdirection: column, $alignitems: center, $justifycontent: center);
+    position: relative;
+    height: 75px;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid $white;
+
+    @media (min-width: 570px) {
+        height: 150px;
+        width: 120px;
+    }
+}
+
+.reservation--title,
+.reservation--number,
+.reservation--suffix {
+    margin-bottom: 0;
+    color: $white;
+}
+
+.reservation--title {
+    @include font-size(12px);
+    text-transform: uppercase;
+
+    @media (min-width: 570px) {
+        position: absolute;
+        right: 0;
+        top: 10px;
+        left: 0;
+    }
+}
+
+.reservation--number,
+.reservation--suffix {
+    display: none;
+
+    @media (min-width: 570px) {
+        display: block;
+    }
+}
+
+.reservation--number {
+    @include font-name(Neutraface2-Demi);
+    font-weight: 500;
+    @include font-size(40px);
+    text-transform: uppercase;
+}
+
+.reservation--suffix {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    @include font-size(12px);
+}

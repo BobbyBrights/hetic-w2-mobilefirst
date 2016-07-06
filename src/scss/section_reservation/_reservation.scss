@@ -6,18 +6,26 @@
     display: none;
     height: 100%;
     width: 100%;
-    left: 0;
-    right: 0;
     top: 0;
+    right: 0;
     bottom: 0;
+    left: 0;
     text-align: center;
     background: $green_bunker;
     overflow: auto;
-    z-index: 3;
+    z-index: 5;
 
     @media (min-width: 570px ){
         @include flexcontainer($justifycontent: center);
         display: none;
+    }
+
+    &.show {
+        display: flex;
+        -webkit-animation: fadeIn 0.5s ease-out;
+        -moz-animation: fadeIn 0.5s ease-out;
+        -o-animation: fadeIn 0.5s ease-out;
+        animation: fadeIn 0.5s ease-out;
     }
 
     h1, p {
@@ -28,10 +36,14 @@
 .reservation--box {
     @include flexcontainer($display: flex, $flexdirection: column, $justifycontent: center);
     position: relative;
+    min-height: 470px;
+    width: 70%;
     margin-top: 50px;
 
     @media (min-width: 570px) {
         @include flexcontainer($display: inline-flex);
+        min-height: auto;
+        width: auto;
     }
 
     .btn {
@@ -45,8 +57,8 @@
 
     hr {
         position: relative;
-        width: 100%;
         height: 1px;
+        width: 100%;
         margin: 40px 0 15px 0;
     }
 }
@@ -60,87 +72,5 @@
 
     @media (min-width: 570px) {
         @include flexcontainer($flexdirection: row);
-    }
-}
-
-.reservation--date,
-.reservation--hour,
-.reservation--guest {
-    @include flexcontainer($display: flex, $flexdirection: column, $alignitems: center, $justifycontent: center);
-    position: relative;
-    height: 150px;
-    width: 120px;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid $white;
-}
-
-.reservation--title,
-.reservation--number,
-.reservation--suffix {
-    margin-bottom: 0;
-    color: $white;
-}
-
-.reservation--title {
-    position: absolute;
-    right: 0;
-    top: 10px;
-    left: 0;
-    @include font-size(12px);
-    text-transform: uppercase;
-}
-
-.reservation--number {
-    @include font-name(Neutraface2-Demi);
-    font-weight: 500;
-    @include font-size(40px);
-    text-transform: uppercase;
-}
-
-.reservation--suffix {
-    position: absolute;
-    right: 0;
-    bottom: 10px;
-    left: 0;
-    @include font-size(12px);
-}
-
-.reservation--infos {
-    @include flexcontainer($display: flex, $flexdirection: column);
-
-    @media (min-width: 570px) {
-        @include flexcontainer($flexdirection: row);
-    }
-}
-
-.reservation--mail,
-.reservation--tel {
-    @include flexcontainer($display: flex, $alignitems: center, $justifycontent: center);
-    @include flexchild($flexbasis: 50%);
-
-    img {
-        margin-right: 10px;
-    }
-
-    a {
-        color: $white;
-        @include font-name(BrandonGrotesque-Light);
-        font-weight: 300;
-    }
-}
-
-.reservation--tel {
-    margin-bottom: 10px;
-
-    @media (min-width: 570px) {
-        @include flexcontainer($justifycontent: flex-start);
-        margin-bottom: 0;
-    }
-}
-
-.reservation--mail {
-    @media (min-width: 570px) {
-        @include flexcontainer($justifycontent: flex-end);
     }
 }
