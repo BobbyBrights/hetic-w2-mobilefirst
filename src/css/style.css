@@ -897,11 +897,16 @@ input[type="submit"] {
   font-family: "Neutraface2-Demi", "Arial", "Sans Serif"; }
 
 .header--subtitle {
-  margin: -10px 10px 40px 2px;
+  margin: 0 10px 40px 2px;
   color: #FFFFFF;
   font-family: "BrandonGrotesque-Light", "Arial", "Sans Serif";
   font-weight: 300;
   text-transform: none; }
+  @media only screen and (min-width: 768px) {
+    .header--subtitle {
+      margin-top: -10px; } }
+  .header--subtitle h2 {
+    line-height: 15px; }
 
 .header--next {
   display: -ms-flexbox;
