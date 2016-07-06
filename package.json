@@ -1,7 +1,7 @@
 {
   "name": "hetic-w2-mobilefirst",
   "version": "0.0.5",
-  "description": "Site fictif de présentation et réservation",
+  "description": "Site fictif de présentation et de réservation",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +12,7 @@
   },
   "keywords": [
     "restaurant",
+    "restauration",
     "reservation"
   ],
   "author": "Médrick CAUX",
