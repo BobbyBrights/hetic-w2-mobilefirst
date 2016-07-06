@@ -44,28 +44,6 @@
     margin-top: 40px;
 }
 
-// .restaurant--clock,
-// .restaurant--hour {
-//     display: inline-block;
-// }
-//
-// .restaurant--clock {
-//     @include flexcontainer($display: flex, $alignitems: flex-start);
-//
-//     img {
-//         margin-right: 10px;
-//     }
-// }
-//
-// .restaurant--hour {
-//     span {
-//         margin-bottom: 0;
-//         @include font-name(Neutraface2-Demi);
-//         font-weight: 500;
-//         text-transform: uppercase;
-//     }
-// }
-
 .restaurant--weather,
 .restaurant--clock,
 .restaurant--temperature,
