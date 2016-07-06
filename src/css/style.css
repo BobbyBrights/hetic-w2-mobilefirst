@@ -242,7 +242,7 @@ th {
   font-family: "BrandonGrotesque-LightItalic";
   src: url("../fonts/BrandonGrotesque-LightItalic.eot");
   src: url("../fonts/BrandonGrotesque-LightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/BrandonGrotesque-LightItalic.woff") format("woff"), url("../fonts/BrandonGrotesque-LightItalic.ttf") format("truetype"), url("../fonts/BrandonGrotesque-LightItalic.svg#BrandonGrotesque-LightItalic") format("svg");
-  font-style: italic;
+  font-style: normal;
   font-weight: 300; }
 
 @font-face {
@@ -363,7 +363,8 @@ h3, .h3-like {
       font-size: 1.25rem; } }
 
 strong {
-  font-weight: 900; }
+  font-family: "BrandonGrotesque-Medium", "Arial", "Sans Serif";
+  font-weight: 500; }
 
 p {
   margin-bottom: 10px;
@@ -423,13 +424,38 @@ hr {
   to {
     transform: translateY(-10px); } }
 
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 .burger {
   position: relative;
   display: inline-block;
   width: 30px;
   height: 18px;
   padding-top: 5px;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 5; }
 
 .bars,
 .bars:after,
@@ -473,8 +499,9 @@ hr {
 
 .btn {
   position: relative;
-  cursor: pointer;
-  text-decoration: none; }
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer; }
   .btn:hover {
     text-decoration: none; }
 
@@ -604,9 +631,6 @@ input[type="submit"] {
       -moz-flex: 0 1 41.667%;
       -ms-ieflexvalue(flex): ieflexvalue(0 1 41.667%);
       flex: 0 1 41.667%; } }
-  @media only screen and (min-width: 1200px) {
-    .pagination {
-      padding-left: 8.333%; } }
 
 .numerotation {
   display: inline-block; }
@@ -615,9 +639,8 @@ input[type="submit"] {
   height: 80px;
   width: 100%;
   margin: 50px 0;
-  background: url("../img/background/bg_02.jpg");
-  background-repeat: repeat;
-  background-size: 150px auto; }
+  background: url("../img/background/bg_03.gif");
+  background-repeat: repeat; }
 
 .restaurant,
 .services {
@@ -648,18 +671,22 @@ input[type="submit"] {
   top: 20px;
   right: 20px; }
 
-.overlay {
+.scroll-top {
   position: fixed;
   display: none;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  right: 0;
-  top: 0;
+  width: 50px;
+  height: 50px;
   bottom: 0;
-  text-align: center;
-  background: #152121;
-  z-index: 2; }
+  right: 0;
+  background-image: url("../img/icons/icon_scrolltop.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #152121;
+  background-size: 20px 20px;
+  z-index: 4; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    .scroll-top {
+      background-image: url("../img/icons/icon_scrolltop@2x.png"); } }
 
 .header {
   display: -ms-flexbox;
@@ -719,8 +746,7 @@ input[type="submit"] {
   -webkit-flex: 0 1 50%;
   -moz-flex: 0 1 50%;
   -ms-ieflexvalue(flex): ieflexvalue(0 1 50%);
-  flex: 0 1 50%;
-  line-height: 80px; }
+  flex: 0 1 50%; }
 
 .header--branding {
   display: -ms-flexbox;
@@ -757,39 +783,77 @@ input[type="submit"] {
       flex: 0 1 90%; } }
 
 @media only screen and (min-width: 990px) {
-  .header--menuMobile {
-    display: none; } }
+  .header--menu {
+    display: inline-block; }
+    .header--menu .burger {
+      display: none; } }
 
-.header--menuDesktop {
-  display: none; }
+.header--nav {
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-ieflexvalue(justify-content): ieflexvalue(center);
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-ieflexvalue(align-items): ieflexvalue(center);
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  text-align: center;
+  background: #152121;
+  z-index: 4; }
   @media only screen and (min-width: 990px) {
-    .header--menuDesktop {
-      display: inline-block; } }
-
-.header--menu {
-  position: relative;
-  display: inline-block;
-  padding-right: 40px; }
-  .header--menu li {
-    display: inline-block;
+    .header--nav {
+      position: relative;
+      display: inline-block;
+      width: auto;
+      top: auto;
+      left: auto !important;
+      bottom: auto;
+      padding-right: 40px;
+      text-align: inherit;
+      background: none; } }
+  .header--nav li {
+    height: 50px;
     list-style-type: none; }
-    .header--menu li:not(:first-child) {
-      padding-left: 25px; }
-  .header--menu a {
+    @media only screen and (min-width: 990px) {
+      .header--nav li {
+        display: inline-block;
+        height: auto; }
+        .header--nav li:not(:first-child) {
+          padding-left: 25px; } }
+  .header--nav a {
     color: #FFFFFF;
     font-family: "Neutraface2-Light", "Arial", "Sans Serif";
     font-weight: 300;
-    font-size: 14px;
-    font-size: 0.875rem;
+    font-size: 20px;
+    font-size: 1.25rem;
     text-transform: uppercase; }
-    .header--menu a:hover {
+    .header--nav a:hover {
       text-decoration: none; }
-  .header--menu hr {
+    @media only screen and (min-width: 990px) {
+      .header--nav a {
+        font-size: 14px;
+        font-size: 0.875rem; } }
+  .header--nav hr {
     display: none;
     position: absolute;
-    bottom: 10px;
     height: 2px;
-    width: 28px; }
+    width: 28px;
+    top: 20px; }
+
+.header--reservation {
+  display: none; }
+  @media only screen and (min-width: 990px) {
+    .header--reservation {
+      display: inline-block; } }
 
 .header--ads {
   display: -ms-flexbox;
@@ -911,8 +975,7 @@ input[type="submit"] {
       -webkit-flex: 0 1 58.333%;
       -moz-flex: 0 1 58.333%;
       -ms-ieflexvalue(flex): ieflexvalue(0 1 58.333%);
-      flex: 0 1 58.333%;
-      padding-right: 8.333%; } }
+      flex: 0 1 58.333%; } }
 
 .restaurant--title {
   -webkit-flex: 0 1 100%;
@@ -951,7 +1014,7 @@ input[type="submit"] {
   display: -moz-flex;
   display: -webkit-flex;
   display: flex;
-  margin-top: 20px; }
+  margin-top: 40px; }
 
 .restaurant--weather,
 .restaurant--clock,
@@ -1236,19 +1299,13 @@ input[type="submit"] {
       padding-left: 8.333%;
       padding-right: 8.333%; } }
 
-.chefs--left,
-.chefs--right {
-  -webkit-flex: 0 1 100%;
-  -moz-flex: 0 1 100%;
-  -ms-ieflexvalue(flex): ieflexvalue(0 1 100%);
-  flex: 0 1 100%; }
-  @media only screen and (min-width: 768px) {
-    .chefs--left,
-    .chefs--right {
-      -webkit-flex: 0 1 50%;
-      -moz-flex: 0 1 50%;
-      -ms-ieflexvalue(flex): ieflexvalue(0 1 50%);
-      flex: 0 1 50%; } }
+@media only screen and (min-width: 768px) {
+  .chefs--left,
+  .chefs--right {
+    -webkit-flex: 0 1 50%;
+    -moz-flex: 0 1 50%;
+    -ms-ieflexvalue(flex): ieflexvalue(0 1 50%);
+    flex: 0 1 50%; } }
 
 .chefs--right {
   margin-top: 40px; }
@@ -1375,14 +1432,14 @@ input[type="submit"] {
   display: none;
   height: 100%;
   width: 100%;
-  left: 0;
-  right: 0;
   top: 0;
+  right: 0;
   bottom: 0;
+  left: 0;
   text-align: center;
   background: #152121;
   overflow: auto;
-  z-index: 3; }
+  z-index: 5; }
   @media (min-width: 570px) {
     .reservation {
       display: -ms-flexbox;
@@ -1394,6 +1451,12 @@ input[type="submit"] {
       -ms-ieflexvalue(justify-content): ieflexvalue(center);
       justify-content: center;
       display: none; } }
+  .reservation.show {
+    display: flex;
+    -webkit-animation: fadeIn 0.5s ease-out;
+    -moz-animation: fadeIn 0.5s ease-out;
+    -o-animation: fadeIn 0.5s ease-out;
+    animation: fadeIn 0.5s ease-out; }
   .reservation h1, .reservation p {
     color: #FFFFFF; }
 
@@ -1411,13 +1474,17 @@ input[type="submit"] {
   -ms-ieflexvalue(justify-content): ieflexvalue(center);
   justify-content: center;
   position: relative;
+  min-height: 470px;
+  width: 70%;
   margin-top: 50px; }
   @media (min-width: 570px) {
     .reservation--box {
       display: -ms-inline-flexbox;
       display: -moz-inline-flex;
       display: -webkit-inline-flex;
-      display: inline-flex; } }
+      display: inline-flex;
+      min-height: auto;
+      width: auto; } }
   .reservation--box .btn {
     -webkit-flex: 0 1 auto;
     -moz-flex: 0 1 auto;
@@ -1440,8 +1507,8 @@ input[type="submit"] {
         align-self: flex-end; } }
   .reservation--box hr {
     position: relative;
-    width: 100%;
     height: 1px;
+    width: 100%;
     margin: 40px 0 15px 0; }
 
 .reservation--select {
@@ -1506,11 +1573,17 @@ input[type="submit"] {
   -ms-ieflexvalue(align-items): ieflexvalue(center);
   align-items: center;
   position: relative;
-  height: 150px;
-  width: 120px;
+  height: 75px;
+  width: 100%;
   margin: 10px;
   padding: 10px;
   border: 1px solid #FFFFFF; }
+  @media (min-width: 570px) {
+    .reservation--date,
+    .reservation--hour,
+    .reservation--guest {
+      height: 150px;
+      width: 120px; } }
 
 .reservation--title,
 .reservation--number,
@@ -1519,13 +1592,23 @@ input[type="submit"] {
   color: #FFFFFF; }
 
 .reservation--title {
-  position: absolute;
-  right: 0;
-  top: 10px;
-  left: 0;
   font-size: 12px;
   font-size: 0.75rem;
   text-transform: uppercase; }
+  @media (min-width: 570px) {
+    .reservation--title {
+      position: absolute;
+      right: 0;
+      top: 10px;
+      left: 0; } }
+
+.reservation--number,
+.reservation--suffix {
+  display: none; }
+  @media (min-width: 570px) {
+    .reservation--number,
+    .reservation--suffix {
+      display: block; } }
 
 .reservation--number {
   font-family: "Neutraface2-Demi", "Arial", "Sans Serif";
