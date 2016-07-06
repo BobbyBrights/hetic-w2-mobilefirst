@@ -13,7 +13,6 @@
 .header--navigation {
     @include flexcontainer($display: flex);
     @include flexchild($flexbasis: 50%);
-    line-height: 80px;
 }
 
 .header--branding {

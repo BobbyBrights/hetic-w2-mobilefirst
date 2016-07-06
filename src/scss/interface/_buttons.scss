@@ -2,8 +2,9 @@
 
 .btn {
     position: relative;
-    cursor: pointer;
+    display: inline-block;
     text-decoration: none;
+    cursor: pointer;
 
     &:hover {
         text-decoration: none;
