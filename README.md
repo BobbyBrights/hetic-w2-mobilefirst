@@ -16,7 +16,7 @@ Si toutefois la consultation de la version de développement est nécessaire mer
 $ npm install
 ```
 
-Puis tapez la commande suivante pour lancer la version de développement :
+Puis tapez la commande suivante pour lancer la prévisualisation via le serveur :
 
 ```sh
 $ gulp live
