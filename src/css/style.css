@@ -424,29 +424,19 @@ hr {
   to {
     transform: translateY(-10px); } }
 
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@-o-keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
 @keyframes fadeIn {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+@keyframes fadeDisplay {
+  0% {
+    opacity: 0;
+    display: none; }
+  100% {
+    opacity: 1;
+    display: block; } }
 
 .burger {
   position: relative;
@@ -684,6 +674,9 @@ input[type="submit"] {
   background-color: #152121;
   background-size: 20px 20px;
   z-index: 4; }
+  @media (max-width: 480px) {
+    .scroll-top {
+      display: none !important; } }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
     .scroll-top {
       background-image: url("../img/icons/icon_scrolltop@2x.png"); } }
@@ -702,7 +695,7 @@ input[type="submit"] {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 480px) {
     .header {
       background-image: url("../img/header/header.jpg"); } }
   .header .flex-container {
