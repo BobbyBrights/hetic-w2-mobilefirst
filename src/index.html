@@ -35,13 +35,11 @@
                     <a href="#"><img class="header--logo" src="img/icons/logo_yume.png" srcset="img/icons/logo_yume.png 1x, img/icons/logo_yume@2x.png 2x" alt="Logo Restaurant Yume"></a>
                 </div>
                 <div class="header--navigation">
-                    <div class="header--menuMobile">
-                        <div class="burger">
+                    <div class="header--menu">
+                        <a class="burger open-menu">
                             <div class="bars"></div>
-                        </div>
-                    </div>
-                    <div class="header--menuDesktop">
-                        <nav class="header--menu">
+                        </a>
+                        <nav class="header--nav">
                             <ul>
                                 <li><a href="">Restaurant</a></li>
                                 <li><a href="">Menus</a></li>
@@ -52,7 +50,9 @@
                                 <hr/>
                             </ul>
                         </nav>
-                        <a href="#" class="btn airline popin-resa">Réservation</a>
+                        <div class="header--reservation">
+                            <a href="#" class="btn airline popin-resa">Réservation</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -88,13 +88,9 @@
                         <p class="restaurant--first">Connaissez-vous la traduction du mot "rêve" en japonais ? Il se traduit simplement... il s'agit de <strong>Yume</strong>. Venez découvrir sa définition en poussant les portes de notre établissement.</p>
                         <p class="restaurant--second">Notre chef cuisinier se fera un plaisir de vous accompagner vers les saveurs d'Asie en vous faisant découvrir une cuisine raffinée et contemporaine.</p>
                         <div class="restaurant--infobar">
-                            <div class="restaurant--weather">
-                                <img src="img/icons/icon_cloud.png" srcset="img/icons/icon_cloud.png 1x, img/icons/icon_cloud@2x.png 2x" alt="Icône météo">
-                                <p class="restaurant--temperature">28°C</p>
-                            </div>
                             <div class="restaurant--clock">
                                 <img src="img/icons/icon_clock.png" srcset="img/icons/icon_clock.png 1x, img/icons/icon_clock@2x.png 2x" alt="Icône horloge">
-                                <p class="restaurant--hour">15:00</p>
+                                <p class="restaurant--hour"><span>Horaires</span><br/>Ouvert du mardi au samedi<br/> de <strong>11h00 à 15h00</strong> et de <strong>19h00 à 23h00</strong></p>
                             </div>
                         </div>
                     </div>
@@ -332,12 +328,13 @@
             <a href="#" class="close popin-resa"><img src="img/icons/icon_close.png" srcset="img/icons/icon_close.png 1x, img/icons/icon_close@2x.png 2x" alt="Icône close"></a>
         </section>
 
+        <a href="#" class="scroll-top"></a>
     </main>
 
     <footer class="footer">
         <div class="flex-container">
             <div class="flex-row">
-                <div class="footer--infos">
+                <div class="footer--infos gutters">
                     <div class="footer--copyright"><p>© Restaurant Yume</p></div>
                     <div class="footer--socials">
                         <a href="#"><img class="footer--social" src="img/icons/social_facebook.svg" alt="Icône facebook"></a>
