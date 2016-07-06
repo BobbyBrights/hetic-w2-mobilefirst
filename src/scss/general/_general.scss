@@ -39,7 +39,8 @@ h3, .h3-like {
 }
 
 strong {
-    font-weight: 900;
+    @include font-name(BrandonGrotesque-Medium);
+    font-weight: 500;
 }
 
 // Définition des paragraphes
