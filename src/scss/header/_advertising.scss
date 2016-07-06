@@ -21,9 +21,17 @@
 }
 
 .header--subtitle {
-    margin: -10px 10px 40px 2px;
+    margin: 0 10px 40px 2px;
     color: $white;
     @include font-name(BrandonGrotesque-Light);
     font-weight: 300;
     text-transform: none;
+
+    @media #{$small} {
+        margin-top: -10px;
+    }
+
+    h2 {
+        line-height: 15px;
+    }
 }
