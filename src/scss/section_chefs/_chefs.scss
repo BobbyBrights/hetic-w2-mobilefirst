@@ -16,8 +16,6 @@
 
 .chefs--left,
 .chefs--right {
-    @include flexchild($flexbasis: 100%);
-
     @media #{$small} {
         @include flexchild($flexbasis: 50%);
     }
