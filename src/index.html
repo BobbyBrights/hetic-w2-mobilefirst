@@ -87,10 +87,20 @@
                         <h2 class="restaurant--title">Le renouveau japonais</h2>
                         <p class="restaurant--first">Connaissez-vous la traduction du mot "rêve" en japonais ? Il se traduit simplement... il s'agit de <strong>Yume</strong>. Venez découvrir sa définition en poussant les portes de notre établissement.</p>
                         <p class="restaurant--second">Notre chef cuisinier se fera un plaisir de vous accompagner vers les saveurs d'Asie en vous faisant découvrir une cuisine raffinée et contemporaine.</p>
-                        <div class="restaurant--infobar">
+                        <!-- <div class="restaurant--infobar">
                             <div class="restaurant--clock">
                                 <img src="img/icons/icon_clock.png" srcset="img/icons/icon_clock.png 1x, img/icons/icon_clock@2x.png 2x" alt="Icône horloge">
                                 <p class="restaurant--hour"><span>Horaires</span><br/>Ouvert du mardi au samedi<br/><strong>11h00 à 15h00</strong><br/><strong>19h00 à 23h00</strong></p>
+                            </div>
+                        </div> -->
+                        <div class="restaurant--infobar">
+                            <div class="restaurant--weather">
+                                <img src="img/icons/icon_cloud.png" srcset="img/icons/icon_cloud.png 1x, img/icons/icon_cloud@2x.png 2x" alt="Icône météo">
+                                <p class="restaurant--temperature">28°C</p>
+                            </div>
+                            <div class="restaurant--clock">
+                                <img src="img/icons/icon_clock.png" srcset="img/icons/icon_clock.png 1x, img/icons/icon_clock@2x.png 2x" alt="Icône horloge">
+                                <p class="restaurant--hour">15:00</p>
                             </div>
                         </div>
                     </div>
@@ -262,29 +272,33 @@
                     </div>
                 </div>
                 <div class="flex-row">
-                    <form action="" class="contact--form gutters">
-                        <label for="name">Nom</label>
-                        <input type="text" name="name">
-                        <label for="nickname">Prénom</label>
-                        <input type="text" name="nickname">
-                        <label for="email">Adresse email</label>
-                        <input type="text" name="email">
-                        <label for="message">Message</label>
-                        <textarea name="message"></textarea>
-                        <input class="btn airline inverse" type="submit" name="name" value="Envoyer">
-                    </form>
-                    <div class="contact--more gutters">
-                        <div class="contact--location">
-                            <p class="contact--title">Restaurant Yume</p>
-                            <p class="contact--address">120 rue de Vaugirard<br/>75015 PARIS</p>
-                        </div>
-                        <div class="contact--tel">
-                            <img src="img/icons/icon_tel.png" srcset="img/icons/icon_tel.png 1x, img/icons/icon_tel@2x.png 2x" alt="Icône téléphone">
-                            <a href="tel:0800467450">0800 467 450</a>
-                        </div>
-                        <div class="contact--mail">
-                            <img src="img/icons/icon_email.png" srcset="img/icons/icon_email.png 1x, img/icons/icon_email@2x.png 2x" alt="Icône email">
-                            <a href="mailto:contact@yume.com">contact@yume.com</a>
+                    <div class="contact--form">
+                        <form action="" class="contact--fields gutters">
+                            <label for="name">Nom</label>
+                            <input type="text" name="name">
+                            <label for="nickname">Prénom</label>
+                            <input type="text" name="nickname">
+                            <label for="email">Adresse email</label>
+                            <input type="text" name="email">
+                            <label for="message">Message</label>
+                            <textarea name="message"></textarea>
+                            <input class="btn airline inverse" type="submit" name="name" value="Envoyer">
+                        </form>
+                    </div>
+                    <div class="contact--more">
+                        <div class="contact--card gutters">
+                            <div class="contact--location">
+                                <p class="contact--title">Restaurant Yume</p>
+                                <p class="contact--address">120 rue de Vaugirard<br/>75015 PARIS</p>
+                            </div>
+                            <div class="contact--tel">
+                                <img src="img/icons/icon_tel.png" srcset="img/icons/icon_tel.png 1x, img/icons/icon_tel@2x.png 2x" alt="Icône téléphone">
+                                <a href="tel:0800467450">0800 467 450</a>
+                            </div>
+                            <div class="contact--mail">
+                                <img src="img/icons/icon_email.png" srcset="img/icons/icon_email.png 1x, img/icons/icon_email@2x.png 2x" alt="Icône email">
+                                <a href="mailto:contact@yume.com">contact@yume.com</a>
+                            </div>
                         </div>
                     </div>
                 </div>
